@@ -1,5 +1,41 @@
 @tailwind base;
 
+.tint-bg {
+    background-color: #000000;
+background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
+
+.svc-bg {
+    background-color: #000000;
+    background-image: linear-gradient(45deg, #000000 0%, #7f8c8d 74%);
+}
+
+.platinum-bg {
+
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSIjOWZhNmIyIj48L3JlY3Q+CjxwYXRoIGQ9Ik0yOCA2NkwwIDUwTDAgMTZMMjggMEw1NiAxNkw1NiA1MEwyOCA2NkwyOCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzhmOTVhMCIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+CjxwYXRoIGQ9Ik0yOCAwTDI4IDM0TDAgNTBMMCA4NEwyOCAxMDBMNTYgODRMNTYgNTBMMjggMzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdmODU4ZSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+Cjwvc3ZnPg==");
+ 
+}
+
+.major-bg {
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cGF0aCBkPSJNLTIgMTBMMTAgLTJaTTEwIDZMNiAxMFpNLTIgMkwyIC0yIiBzdHJva2U9IiMxYzY0ZjIiIHN0cm9rZS13aWR0aD0iNC41Ij48L3BhdGg+Cjwvc3ZnPg=="),url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+CjxzdG9wIHN0b3AtY29sb3I9IiM2MDkzZjYiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZThmMGZlIj48L3N0b3A+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiPjwvcmVjdD4KPC9zdmc+");
+
+}
+
+.gold-bg {
+    background:
+    radial-gradient(#c27803 15%, transparent 16%) 0 0,
+    radial-gradient(#c27803 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+
+}
+
+.audi  {
+    background-color: #000000;
+background-image: linear-gradient(315deg, #000000 0%, #b82e1f 74%);
+}
 
 .bg-slight-ocean-view {
     background: #373B44;  /* fallback for old browsers */
@@ -57,10 +93,10 @@ background: linear-gradient(to bottom, #4286f4, #373B44); /* W3C, IE 10+/ Edge, 
     background: black;
     overflow: hidden;
     background: #e3a008;  /* fallback colour. Make sure this is just one solid colour. */
-    background: -webkit-linear-gradient(#c27803, rgba(0, 0, 0, 0.75)), 
-    url('https://images.unsplash.com/photo-1579131950123-83d857aad6e2?ixlib=rb-1.2.1&auto=format&fit=crop&h=760&q=80');
-    background: linear-gradient(#c27803, rgba(0, 0, 0, 0.75)), 
-    url('https://images.unsplash.com/photo-1579131950123-83d857aad6e2?ixlib=rb-1.2.1&auto=format&fit=crop&h=760&q=80'); /* The least supported option. */
+    background: -webkit-linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/audia6_red.jpg');
+    background: linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/audia6_red.jpg'); /* The least supported option. */
     background-size:     cover;                      
     background-repeat:   no-repeat;
     background-position:50%!important
@@ -73,41 +109,94 @@ background: linear-gradient(to bottom, #4286f4, #373B44); /* W3C, IE 10+/ Edge, 
     background: black;
     overflow: hidden;
     background: #e3a008;  /* fallback colour. Make sure this is just one solid colour. */
-    background: -webkit-linear-gradient(#c27803, rgba(0, 0, 0, 0.75)), 
-    url('https://images.unsplash.com/photo-1587233555069-23e655e5d705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');
-    background: linear-gradient(#c27803, rgba(0, 0, 0, 0.75)), 
-    url('https://images.unsplash.com/photo-1587233555069-23e655e5d705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80'); /* The least supported option. */
+    background: -webkit-linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/audiq8_2.jpg');
+    background: linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/audiq8_2.jpg'); /* The least supported option. */
     background-size:     cover;                      
     background-repeat:   no-repeat;
     background-position:50%!important
 }
-
-.card-4 {
-    background: black;
-    overflow: hidden;
-    background: #e3a008;  /* fallback colour. Make sure this is just one solid colour. */
-    background: -webkit-linear-gradient(#c27803, rgba(0, 0, 0, 0.75)), 
-    url('https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80');
-    background: linear-gradient(#c27803, rgba(0, 0, 0, 0.75)), 
-    url('https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80'); /* The least supported option. */
-    background-size:     cover;                      
-    background-repeat:   no-repeat;
-    background-position:50%!important
-}
-
 
 .card-3 {
     background: black;
     overflow: hidden;
     background: #e3a008;  /* fallback colour. Make sure this is just one solid colour. */
-    background: -webkit-linear-gradient(#c27803, rgba(0, 0, 0, 0.75)), 
-    url('https://images.unsplash.com/photo-1584060622420-0673aad46076?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');
-    background: linear-gradient(#c27803, rgba(0, 0, 0, 0.75)), 
-    url('https://images.unsplash.com/photo-1584060622420-0673aad46076?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'); /* The least supported option. */
+    background: -webkit-linear-gradient(#16262E, rgba(0, 0, 0, 0.1)), 
+    url('../assets/img/corvette.jpg');
+    background: linear-gradient(#16262E, rgba(0, 0, 0, 0.1)), 
+    url('../assets/img/corvette.jpg'); /* The least supported option. */
     background-size:     cover;                      
     background-repeat:   no-repeat;
     background-position:50%!important
 }
+
+
+.card-4 {
+    background: black;
+    overflow: hidden;
+    background: #e3a008;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(#16262E, rgba(0, 0, 0, 0.35)), 
+    url('../assets/img/bmwx7.jpg');
+    background: linear-gradient(#16262E, rgba(0, 0, 0, 0.35)), 
+    url('../assets/img/bmwx7.jpg'); /* The least supported option. */
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position:50%!important
+}
+
+.card-5 {
+    background: black;
+    overflow: hidden;
+    background: #e3a008;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(#829cbc, rgba(0, 0, 0, 0.2)), 
+    url('../assets/img/amg_gt.jpg');
+    background: linear-gradient(#829cbc, rgba(0, 0, 0, 0.2)), 
+    url('../assets/img/amg_gt.jpg'); /* The least supported option. */
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position:50%!important
+}
+
+.card-6 {
+    background: black;
+    overflow: hidden;
+    background: #e3a008;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(#01172F, rgba(0, 0, 0, 0.2)), 
+    url('../assets/img/rr_cullinan.jpg');
+    background: linear-gradient(#01172F, rgba(0, 0, 0, 0.2)), 
+    url('../assets/img/rr_cullinan.jpg'); /* The least supported option. */
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position:50%!important
+}
+
+.card-7 {
+    background: black;
+    overflow: hidden;
+    background: #e3a008;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(#1a0f00, rgba(0, 0, 0, 0.2)), 
+    url('../assets/img/leatherconditioning.jpg');
+    background: linear-gradient(#1a0f00, rgba(0, 0, 0, 0.2)), 
+    url('../assets/img/leatherconditioning.jpg'); /* The least supported option. */
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position:50%!important
+}
+
+.card-8 {
+    background: black;
+    overflow: hidden;
+    background: #e3a008;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(#01172F, rgba(0, 0, 0, 0.2)), 
+    url('../assets/img/rr.jpg');
+    background: linear-gradient(#01172F, rgba(0, 0, 0, 0.2)), 
+    url('../assets/img/rr.jpg'); /* The least supported option. */
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position:50%!important
+}
+
 
 img {
    object-fit: cover;
