@@ -149,9 +149,10 @@ background: linear-gradient(to bottom, #4286f4, #373B44); /* W3C, IE 10+/ Edge, 
     background: black;
     overflow: hidden;
     background: #e3a008;  /* fallback colour. Make sure this is just one solid colour. */
-    background: -webkit-linear-gradient(#829cbc, rgba(0, 0, 0, 0.2)), 
+    background: -webkit-linear-gradient(#001a8d, rgba(36, 36, 36, 0.5)), 
     url('../assets/img/amg_gt.jpg');
-    background: linear-gradient(#829cbc, rgba(0, 0, 0, 0.2)), 
+    
+    background: linear-gradient(#001a8d, rgba(36, 36, 36, 0.5)), 
     url('../assets/img/amg_gt.jpg'); /* The least supported option. */
     background-size:     cover;                      
     background-repeat:   no-repeat;
@@ -161,7 +162,7 @@ background: linear-gradient(to bottom, #4286f4, #373B44); /* W3C, IE 10+/ Edge, 
 .card-6 {
     background: black;
     overflow: hidden;
-    background: #e3a008;  /* fallback colour. Make sure this is just one solid colour. */
+    background: #01172F;  /* fallback colour. Make sure this is just one solid colour. */
     background: -webkit-linear-gradient(#01172F, rgba(0, 0, 0, 0.2)), 
     url('../assets/img/rr_cullinan.jpg');
     background: linear-gradient(#01172F, rgba(0, 0, 0, 0.2)), 
