@@ -1,5 +1,66 @@
 @tailwind base;
 
+.ceramic-bg {
+    background: black;
+    overflow: hidden;
+    background: -webkit-linear-gradient(#000000, rgba(0, 0, 0, 0.1)), 
+    url('../assets/img/ceramic.jpg');
+    background: linear-gradient(#000000, rgba(0, 0, 0, 0.1)), 
+    url('../assets/img/ceramic.jpg'); /* The least supported option. */
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: 50%!important
+}
+
+.tinting-bg {
+    background: black;
+    overflow: hidden;
+    background: -webkit-linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/tint.jpg');
+    background: linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/tint.jpg'); /* The least supported option. */
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: 50%!important
+}
+
+.washing-bg {
+    background: black;
+    overflow: hidden;
+    background: -webkit-linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/washing-card.jpg');
+    background: linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/washing-card.jpg'); /* The least supported option. */
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: 50%!important
+}
+
+.paintcorrection-bg {
+    background: black;
+    overflow: hidden;
+    background: -webkit-linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/911.jpg');
+    background: linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/911.jpg'); /* The least supported option. */
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: 50%!important
+}
+
+.detailing-services-bg {
+    background: black;
+    overflow: hidden;
+    background: -webkit-linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/red.jpg');
+    background: linear-gradient(#000000, rgba(0, 0, 0, 0.25)), 
+    url('../assets/img/red.jpg'); /* The least supported option. */
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: 50%!important
+}
+
+
 .tint-bg {
     background-color: #000000;
 background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
