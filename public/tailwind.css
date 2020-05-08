@@ -1,6 +1,6 @@
 @tailwind base;
 
-.ceramic-bg {
+.ceramicpro-bg {
     background: black;
     overflow: hidden;
     background: -webkit-linear-gradient(#000000, rgba(0, 0, 0, 0.1)), 
