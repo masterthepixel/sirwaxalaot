@@ -1,5 +1,10 @@
 @tailwind base;
 
+.textshadow {
+    color: #FFFFFF;
+    text-shadow: #474747 3px 5px 2px;
+}
+
 .ceramicpro-bg {
     background: black;
     overflow: hidden;
