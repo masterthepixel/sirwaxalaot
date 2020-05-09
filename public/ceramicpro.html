@@ -44,8 +44,7 @@
 
 
     <!-- JS for TailwindUI -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 
 
@@ -55,127 +54,113 @@
 <body class="antialiased debug-screens">
     <!-- Navigation Area -->
 
-    <nav class="bg-black shadow-2xl">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex items-center mr-2 -ml-2 md:hidden">
-                        <!-- Mobile menu button -->
-                        <button
-                            class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
-                            aria-label="Main menu" aria-expanded="false">
-                            <!-- Icon when menu is closed. -->
-                            <!-- Menu open: "hidden", Menu closed: "block" -->
-                            <svg class="block w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                            <!-- Icon when menu is open. -->
-                            <!-- Menu open: "block", Menu closed: "hidden" -->
-                            <svg class="hidden w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
+
+    <nav x-data="{ open: false }" class="bg-black shadow-2xl">
+        <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-20 ">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button @click="open = !open"
+                        class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white">
+                        <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                            <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex justify-center flex-1 sm:items-stretch sm:justify-start">
+                    <div class="flex-shrink-0">
+                        <img class="block h-8 lg:hidden" src="./assets/img/logo.png" alt="Freight Leads" />
+                        <img class="hidden h-8 lg:block" src="./assets/img/logo.png" alt="Freight Leads" />
                     </div>
-                    <div class="flex items-center flex-shrink-0">
-                        <img class="block w-auto h-8 lg:hidden" src="./assets/img/logo.png" alt="Sir Wax A Lot" />
-                        <img class="hidden w-auto h-8 lg:block" src="./assets/img/logo.png" alt="Sir Wax A Lot" />
-                    </div>
-                    <div class="hidden md:ml-6 md:flex md:items-center">
-                        <a href="/index.html"
-                            class="px-3 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-gray-900 rounded-md focus:outline-none focus:text-white focus:bg-gray-700">Home</a>
-                        <a href="/ceramicpro.html"
-                            class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Ceramic
-                            Pro</a>
-                        <a href="#"
-                            class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Detailing</a>
-                        <a href="#"
-                            class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Window
-                            Tinting</a>
-                        <a href="#"
-                            class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Washing</a>
-                        <a href="#"
-                            class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Detail
-                            Services</a>
-                        <a href="#"
-                            class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Alarms
-                            & Starters </a>
+                    <div class="hidden sm:block sm:ml-6">
+                        <!-- Desktop Menu Items -->
+                        <div class="flex items-center">
+                            <a href="/index.html"
+                                class="px-3 py-2 font-semibold leading-5 text-white transition duration-150 ease-in-out bg-gray-900 rounded-md text-inter-sm focus:outline-none focus:text-white focus:bg-gray-700">Home</a>
+
+                            <a href="/ceramicpro.html"
+                                class="px-3 py-2 ml-4 font-semibold leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-sm hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-400">Ceramic
+                                Pro</a>
+                            <a href="/index.html#detailing"
+                                class="px-3 py-2 ml-4 font-semibold leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-sm hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-400">Detailing</a>
+                            <a href="/index.html#washing"
+                                class="px-3 py-2 ml-4 font-semibold leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-sm hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-400">Washing</a>
+                            <a href="/index.html#windowtint"
+                                class="px-3 py-2 ml-4 font-semibold leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-sm hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-400">Window
+                                Tint</a>
+                            <a href="/index.html#viper"
+                                class="px-3 py-2 ml-4 font-semibold leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-sm hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-400">Alarms
+                                & Starters</a>
+                            <a href="https://app.acuityscheduling.com/schedule.php?owner=19553959"
+                                class="px-3 py-2 ml-4 font-semibold leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-sm hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-400">Book
+                                Now</a>
+                        </div>
                     </div>
                 </div>
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <span class="rounded-md shadow-sm">
-                            <button type="button"
-                                class="relative inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-orange-500 border border-transparent rounded-md hover:bg-orange-400 focus:outline-none focus:shadow-outline-orange focus:border-orange-600 active:bg-orange-600">
-                                <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                        clip-rule="evenodd" />
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                    <div @click.away="open = false" class="relative ml-3" x-data="{ open: false }">
+                        <div>
+                            <button @click="open = !open"
+                                class="flex transition duration-150 ease-in-out border-2 border-transparent rounded-full text-inter-sm focus:outline-none focus:border-white">
+                                <svg class="w-6 h-6" stroke="white" fill="none" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                                 </svg>
-                                <span>Book Now</span>
                             </button>
-                        </span>
-                    </div>
-                    <div class="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
-                        <button
-                            class="p-1 text-gray-400 transition duration-150 ease-in-out border-2 border-transparent rounded-full hover:text-gray-300 focus:outline-none focus:text-gray-500 focus:bg-gray-100"
-                            aria-label="Notifications">
-                            <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                            </svg>
-                        </button>
-
-
+                        </div>
+                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="transform opacity-0 scale-95"
+                            x-transition:enter-end="transform opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75"
+                            x-transition:leave-start="transform opacity-100 scale-100"
+                            x-transition:leave-end="transform opacity-0 scale-95"
+                            class="absolute right-0 w-48 mt-2 origin-top-right rounded-md shadow-lg">
+                            <div class="py-1 bg-gray-900 rounded-md shadow-xs">
+                                <a href="tel:+13015168322"
+                                    class="block px-4 py-2 leading-5 text-gray-100 transition duration-150 ease-in-out text-inter-sm hover:bg-orange-500 focus:outline-none focus:bg-orange-600">Call
+                                    Us</a>
+                                <a href="/index.html#contact"
+                                    class="block px-4 py-2 leading-5 text-gray-100 transition duration-150 ease-in-out text-inter-sm hover:bg-orange-500 focus:outline-none focus:bg-orange-600">Email
+                                    Us</a>
+                                <a href="/index.html#contact"
+                                    class="block px-4 py-2 leading-5 text-gray-100 transition duration-150 ease-in-out text-inter-sm hover:bg-orange-500 focus:outline-none focus:bg-orange-600">Contact
+                                    Us</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Mobile Menu Items -->
+        <div :class="{'block': open, 'hidden': !open}" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3">
+                <a href="/"
+                    class="block px-3 py-2 font-medium text-white transition duration-150 ease-in-out bg-yellow-400 rounded-md text-inter-base focus:outline-none focus:text-white focus:bg-yellow-300">Home</a>
 
-        <!--
-          Mobile menu, toggle classes based on menu state.
-      
-          Menu open: "block", Menu closed: "hidden"
-        -->
-        <div class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 sm:px-3">
-                <a href="#"
-                    class="block px-3 py-2 text-base font-medium text-white transition duration-150 ease-in-out bg-gray-900 rounded-md focus:outline-none focus:text-white focus:bg-gray-700">Home</a>
-                <a href="#"
-                    class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Ceramic
+                <a href="ceramicpro.html"
+                    class="block px-3 py-2 mt-1 font-medium text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-base hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-300">Ceramic
                     Pro</a>
-                <a href="#"
-                    class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Window
-                    Tinting</a>
-                <a href="#"
-                    class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Calendar</a>
-            </div>
-            <div class="pt-4 pb-3 border-t border-gray-700">
-                <div class="flex items-center px-5 sm:px-6">
-                    <div class="flex-shrink-0">
-                        <img class="w-10 h-10 rounded-full"
-                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt="" />
-                    </div>
-                    <div class="ml-3">
-                        <div class="text-base font-medium leading-6 text-white">Tom Cook</div>
-                        <div class="text-sm font-medium leading-5 text-gray-400">tom@example.com</div>
-                    </div>
-                </div>
-                <div class="px-2 mt-3 sm:px-3">
-                    <a href="#"
-                        class="block px-3 py-2 text-base font-medium text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Your
-                        Profile</a>
-                    <a href="#"
-                        class="block px-3 py-2 mt-1 text-base font-medium text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Settings</a>
-                    <a href="#"
-                        class="block px-3 py-2 mt-1 text-base font-medium text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Sign
-                        out</a>
-                </div>
+                <a href="/index.html#detailing"
+                    class="block px-3 py-2 mt-1 font-medium text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-base hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-300">Detailing</a>
+                <a href="/index.html#washing"
+                    class="block px-3 py-2 mt-1 font-medium text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-base hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-300">Washing</a>
+                <a href="/index.html#tint"
+                    class="block px-3 py-2 mt-1 font-medium text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-base hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-300">Tint</a>
+                <a href="/index.html#alarms"
+                    class="block px-3 py-2 mt-1 font-medium text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-base hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-300">Alarms</a>
+                <a href="/index.html#starters"
+                    class="block px-3 py-2 mt-1 font-medium text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-base hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-300">Starters</a>
+                <a href="https://app.acuityscheduling.com/schedule.php?owner=19553959"
+                    class="block px-3 py-2 mt-1 font-medium text-gray-300 transition duration-150 ease-in-out rounded-md text-inter-base hover:text-white hover:bg-yellow-400 focus:outline-none focus:text-white focus:bg-yellow-300">Book
+                    Now</a>
             </div>
         </div>
     </nav>
+
 
     <!--- /End of Navigation Area -->
 
