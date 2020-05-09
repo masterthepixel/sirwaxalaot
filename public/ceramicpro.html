@@ -53,12 +53,21 @@
     <!-- JS for Sticky Menu -->
     <script src='./menuscript.js'></script>
 
+    <!-- Background Video -->
+    <link rel="stylesheet" href="./bgvideo.css">
+
+    <!-- Background Video JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://rawgit.com/BGStock/jquery-background-video/master/jquery.background-video.js'></script>
+
+
+
 
 
 
 </head>
 
-<body class="antialiased debug-screens">
+<body class="antialiased debug-screens nav-bg">
     <!-- Navigation Area -->
 
 
@@ -171,99 +180,103 @@
 
     <!--- /End of Navigation Area -->
 
-    <header class="flex items-center justify-center h-screen pb-12 bg-header">
-        <!-- <div class="p-4 mx-4 text-center bg-white rounded-lg md:p-8">
-            <p class="text-inter-sm ">
-                Waxing is so yesterday…
-            </p>
-            <h1
-                class="font-extrabold leading-10 tracking-tight text-yellow-900 text-inter-4xl sm:text-inter-5xl sm:leading-none md:text-inter-6xl">
-                Ceramic Pro
-            </h1>
-            <p class="text-inter-lg">
-                Never Wax Your Car Again
-            </p>
-        </div> -->
+    <div class="h-screen hero">
+        <div class="container px-6 mx-auto">
 
-        <!-- Container -->
-        <div class="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
-
-            <!-- Image Column -->
-            <div class="w-full h-64 lg:w-1/2 lg:h-auto ">
-                <img class="object-cover w-full h-full " src="../assets/img/ceramic_landing_lambo_color_big.jpg"
-                    alt="Ceramic Pro">
-            </div>
-            <!-- Close Image Column -->
-
-            <!-- Text Column -->
-            <div
-                class="max-w-lg md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12 ... animated-ceramic-bg">
-                <!-- Text Wrapper -->
-                <div class="flex flex-col p-8 md:px-16">
-
-                    <p class="pl-1 font-bold tracking-wide text-gray-100 uppercase text-inter-sm">
+            <div class="flex flex-col items-center py-6 md:h-96 md:flex-row">
+                <div class="md:w-1/2">
+                    <p class="pl-1 font-bold leading-10 text-blue-800 uppercase sm:leading-none text-inter-sm">&rarr;
                         Never Wax Your Car Again
                     </p>
 
-                    <h2 class="font-extrabold text-gray-200 tracking-tightest text-inter-5xl md:text-inter-6xl">
-                        Ceramic Pro</h2>
+                    <h1
+                        class="font-extrabold leading-10 tracking-tight text-yellow-400 text-inter-4xl sm:text-inter-5xl sm:leading-none md:text-inter-6xl">
+                        Ceramic Pro<span class="text-yellow-500">.</span>
+                    </h1>
 
-                    <p class="mt-4 tracking-wide text-gray-100 lg:p-1 text-inter-base">
-                        Glossy, slick, and self-cleaning, this nano technology allows the Ceramic Pro nano particles to
-                        fill
-                        the smallest pores in the paint. This creates a glass shield that is shiny, smooth and
-                        hydrophobic </br class="hidden:sm">(extremely slick).
-                    </p>
-                    <!-- Button Container -->
-                    <div class="mt-4 rounded-md shadow">
-                        <a href="https://app.acuityscheduling.com/schedule.php?owner=19553959"
-                            class="flex items-center justify-center w-full px-8 py-3 font-medium leading-6 text-white transition duration-150 ease-in-out bg-orange-500 border border-transparent rounded-md text-inter-base hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo md:py-4 md:text-lg md:px-10">
-                            Book Now
-                        </a>
+                    <p class="max-w-md pl-1 font-semibold text-black text-inter-base md:text-inter-lg">
+                        Glossy, slick, and self-cleaning, this nano
+                        technology creates a glass shield
+                        that is shiny, smooth and hydrophobic i.e., extremely slick.</p>
+                    <div class="mt-6">
+                        <div class="inline-flex">
+                            <button
+                                class="px-8 py-3 font-bold text-gray-100 USAFA-bg rounded-l hover:bg-orange-600 ... text-inter-m border border-transparent hover:text-gray-100 hover:shadow-2xl focus:outline focus:shadow-outline">
+                                Learn More
+                            </button>
+                            <button
+                                class="px-8 py-3 font-bold text-gray-100 hanblue-bg rounded-r hover:bg-orange-600 ... text-inter-m border border-transparent hover:text-gray-100 hover:shadow-2xl focus:outline focus:shadow-outline">
+                                Book Now
+                            </button>
+                        </div>
+
                     </div>
+
                 </div>
-                <!-- Close Text Wrapper -->
+                <div class="flex mt-8 md:w-1/2 md:justify-end md:mt-0">
+
+
+                </div>
             </div>
-            <!-- Close Text Column -->
-
         </div>
-        <!-- Close Container -->
-
-
-    </header>
-
-    <div class="shadow-2xl px-4 py-12 mx-auto leading-normal ... video-section ">
-        <div class="video">
-            <video class="video-object" width="100%" autoplay muted loop>
-                <source src="https://lucid-williams-00d28a.netlify.app/assets/vid/ceramicpro.mp4" type="video/mp4" />
-                <source src="http://www.coverr.co/s3/mp4/Coverr-Highrise.webm" type="video/webm" />
-            </video>
-        </div>
-        <div class="container px-4">
-            <h1 id="herotext" data-aos="fade-down" data-aos-duration="1000"
-                class="mt-1 font-black leading-none tracking-tight text-yellow-300 text-inter-4xl sm:leading-none sm:text-inter-6xl lg:text-inter-5xl xl:text-inter-6xl">
-
-            </h1>
-        </div>
-
     </div>
 
+    <!-- Start video hero -->
+    <div class="video-hero jquery-background-video-wrapper demo-video-wrapper">
+        <video class="jquery-background-video" autoplay muted loop
+            poster="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.jpg">
+            <source src="https://lucid-williams-00d28a.netlify.app/assets/vid/ceramicpro.mp4" type="video/mp4">
+            <source src="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.webm"
+                type="video/webm">
+            <source src="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.ogv"
+                type="video/ogg">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="page-width">
+            <div class="video-hero--content h-96">
+                <h2>sdfasdfsfd</h2>
+                <p>asdfasdf</p>
 
-    <section>
-        <div class="container flex items-center justify-center h-screen  ... bg-fixed bg-cover bg-center"
+            </div>
+        </div>
+    </div>
+    <!-- End video hero -->
+
+    <!-- <section>
+        <div class="shadow-2xl  leading-normal h-auto ... video-section ">
+            <div class="video">
+                <video class="video-object" width="100%" autoplay muted loop>
+                    <source src="https://lucid-williams-00d28a.netlify.app/assets/vid/ceramicpro.mp4"
+                        type="video/mp4" />
+                    <source src="http://www.coverr.co/s3/mp4/Coverr-Highrise.webm" type="video/webm" />
+                </video>
+            </div>
+            <div class="container px-4">
+                <h1 id="herotext" data-aos="fade-down" data-aos-duration="1000"
+                    class="mt-1 font-black leading-none tracking-tight text-yellow-300 text-inter-4xl sm:leading-none sm:text-inter-6xl lg:text-inter-5xl xl:text-inter-6xl">
+
+                </h1>
+            </div>
+
+        </div>
+    </section> -->
+
+
+    <!-- <section>
+        <div class="container flex items-center justify-center h-96  ...  bg-cover bg-center"
             style="background-image: url(../assets/img/ceramic-pro-ceramic-coating-cost-ceramic-coating-a-car.jpg)">
             <blockquote
-                class="px-4 mx-4 text-center text-white bg-orange-500 rounded-lg shadow-2xl md:p-8 ... border border-orange-600 bg-opacity-75">
-                <p class="p-0 font-black leading-none text-gray-200 text-inter-2xl">
+                class="px-4 py-6 mx-4 text-center text-white bg-orange-500 rounded-lg shadow-2xl md:p-8 ... border border-orange-600 bg-opacity-75">
+                <p class="font-black leading-none text-gray-200 text-inter-lg md:text-inter-2xl">
                     EXPERIENCE THE BEST </br>PERMANENT COATING
                 </p>
             </blockquote>
         </div>
-    </section>
+    </section> -->
 
     <!-- About Diamond Ceramic Pro -->
     <!-- Ceramic Pro Area -->
-    <div id="ceramic" class="py-16 overflow-hidden lg:py-24 ... bg-blue-900">
+    <div id="ceramic" class="py-16 overflow-hidden lg:py-24 ... ">
         <div class="relative max-w-xl px-4 mx-auto sm:px-6 lg:px-8 lg:max-w-screen-xl">
             <svg class="absolute hidden transform -translate-x-1/2 lg:block left-full -translate-y-1/4" width="404"
                 height="784" fill="none" viewBox="0 0 404 784">
@@ -583,10 +596,10 @@
 
 
     <!-- Ceramic Pro Video Gallery Area -->
-    <section class="bg-blue-900">
-        <div class="container h-screen mx-auto">
+    <section class="h-auto pb-16">
+        <div class="container mx-auto">
             <div class="relative mx-auto max-w-7xl">
-                <div data-aos="fade-in" data-aos-duration="1000" class="py-6 text-center ">
+                <div class="py-6 text-center ">
                     <h2 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
                         Ceramic Pro is a glass shield.
                     </h2>
@@ -719,11 +732,11 @@
 
     <!-- Diamond Ceramic Pro Card -->
 
-    <div class=" ... diamond-bg ">
+    <div class=" ... ceramic-diamond-bg ">
         <div class="pt-12 sm:pt-16 lg:pt-20">
             <div class="max-w-screen-md px-4 mx-auto sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl font-extrabold leading-none text-gray-100 sm:text-4xl">
+                    <h2 class="text-3xl font-extrabold leading-none text-white sm:text-4xl">
                         Lifetime Warranty
                     </h2>
                     <p class="mt-4 leading-5 text-gray-100 text-inter-lg">
@@ -741,21 +754,22 @@
             <div class="relative">
                 <div class="absolute inset-0 h-1/2 ...  "></div>
                 <div class="relative max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
-                    <div class="max-w-lg mx-auto overflow-hidden rounded-lg shadow-lg lg:max-w-none lg:flex">
-                        <div class="px-6 py-8 diamond-card-bg lg:flex-shrink-1 lg:p-12">
-                            <h3 class="font-extrabold leading-none text-blue-900 text-inter-2xl sm:text-inter-3xl ">
+                    <div
+                        class="inset-0 max-w-lg mx-auto overflow-hidden border-2 border-gray-100 rounded-lg shadow-lg lg:max-w-none lg:flex">
+                        <div class="px-6 py-8 linear lg:flex-shrink-1 lg:p-12">
+                            <h3 class="font-extrabold leading-none text-gray-100 text-inter-2xl sm:text-inter-3xl ">
                                 Diamond Ceramic Pro
                             </h3>
 
 
 
 
-                            <p class="mt-6 leading-6 text-blue-900 text-inter-base">Ceramic Pro is a multi-layerable,
+                            <p class="mt-6 leading-6 text-gray-200 text-inter-base">Ceramic Pro is a multi-layerable,
                                 clear,
                                 liquid nano-ceramic coating. When cured, this technology will transform itself on the
                                 surface to a permanent, durable yet flexible glass shield. Coating is applied to paint,
                                 headlights, tail lights, wheel faces, windows, and plastic trims.</p>
-                            <p class="mt-2 leading-6 text-blue-900 text-inter-base ">
+                            <p class="mt-2 leading-6 text-gray-200 text-inter-base ">
 
 
 
@@ -769,82 +783,82 @@
                             <div class="mt-8">
                                 <div class="flex items-center">
                                     <h4
-                                        class="flex-shrink-0 px-4 font-semibold leading-5 tracking-wider text-white uppercase bg-blue-500 rounded-full text-inter-sm">
+                                        class="flex-shrink-0 px-4 font-semibold leading-5 tracking-wider text-black uppercase bg-gray-200 rounded-full text-inter-sm">
                                         What's included
                                     </h4>
-                                    <div class="flex-1 border-t-2 border-blue-500"></div>
+                                    <div class="flex-1 border-t-2 border-gray-200"></div>
                                 </div>
                                 <ul class="mt-8 lg:grid lg:grid-cols-2 lg:col-gap-8 lg:row-gap-5">
                                     <li class="flex items-start lg:col-span-1">
                                         <div class="flex-shrink-0">
-                                            <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <svg class="w-5 h-5 text-gray-200" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
                                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                     clip-rule="evenodd" />
                                             </svg>
                                         </div>
-                                        <p class="ml-3 leading-5 text-gray-900 text-inter-sm">
+                                        <p class="ml-3 leading-5 text-gray-100 text-inter-base">
                                             Hand Wash & Detail
                                         </p>
                                     </li>
                                     <li class="flex items-start lg:col-span-1">
                                         <div class="flex-shrink-0">
-                                            <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <svg class="w-5 h-5 text-gray-200" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
                                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                     clip-rule="evenodd" />
                                             </svg>
                                         </div>
-                                        <p class="ml-3 leading-5 text-gray-900 text-inter-sm">
+                                        <p class="ml-3 leading-5 text-gray-100 text-inter-base">
                                             4 Layers of 9H
                                         </p>
                                     </li>
                                     <li class="flex items-start mt-5 lg:col-span-1 lg:mt-0">
                                         <div class="flex-shrink-0">
-                                            <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <svg class="w-5 h-5 text-gray-200" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
                                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                     clip-rule="evenodd" />
                                             </svg>
                                         </div>
-                                        <p class="ml-3 leading-5 text-gray-900 text-inter-sm">
+                                        <p class="ml-3 leading-5 text-gray-100 text-inter-base">
                                             1 Extra layer on exposed areas
                                         </p>
                                     </li>
                                     <li class="flex items-start mt-5 lg:col-span-1 lg:mt-0">
                                         <div class="flex-shrink-0">
-                                            <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <svg class="w-5 h-5 text-gray-200" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
                                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                     clip-rule="evenodd" />
                                             </svg>
                                         </div>
-                                        <p class="ml-3 leading-5 text-gray-900 text-inter-sm">
+                                        <p class="ml-3 leading-5 text-gray-100 text-inter-base">
                                             1 Layer of Top Coat
                                         </p>
                                     </li>
 
                                     <li class="flex items-start mt-5 lg:col-span-1 lg:mt-0">
                                         <div class="flex-shrink-0">
-                                            <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <svg class="w-5 h-5 text-gray-200" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
                                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                     clip-rule="evenodd" />
                                             </svg>
                                         </div>
-                                        <p class="ml-3 leading-5 text-gray-900 text-inter-sm">
+                                        <p class="ml-3 leading-5 text-gray-100 text-inter-base">
                                             1 Layer of Rain on windshield and front side windows
                                         </p>
                                     </li>
                                     <li class="flex items-start mt-5 lg:col-span-1 lg:mt-0">
                                         <div class="flex-shrink-0">
-                                            <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <svg class="w-5 h-5 text-gray-200" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
                                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                     clip-rule="evenodd" />
                                             </svg>
                                         </div>
-                                        <p class="ml-3 leading-5 text-gray-900 text-inter-sm">
+                                        <p class="ml-3 leading-5 text-gray-100 text-inter-base">
                                             1 Layer of 9H on plastics and wheels
                                         </p>
                                     </li>
@@ -852,16 +866,16 @@
                             </div>
                         </div>
                         <div
-                            class="px-6 py-8 text-center lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12 ... bg-white">
-                            <p class="text-lg font-medium leading-6 text-gray-900">
+                            class="px-6 py-8 text-center lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12 ... diamondcard">
+                            <p class="text-lg font-medium leading-6 text-white">
                                 Pricing may vary
                             </p>
                             <div
-                                class="flex items-center justify-center mt-4 text-5xl font-extrabold leading-none text-gray-900">
+                                class="flex items-center justify-center mt-4 text-5xl font-extrabold leading-none text-gray-100">
                                 <span>
                                     $1,999
                                 </span>
-                                <span class="ml-3 font-medium leading-7 text-gray-500 text-inter-xl">
+                                <span class="ml-3 font-medium leading-7 text-gray-200 text-inter-xl">
                                     USD
                                 </span>
                             </div>
@@ -871,9 +885,9 @@
                                 </a>
                             </p> -->
                             <div class="mt-6">
-                                <div class="rounded-md shadow">
+                                <div class="rounded-lg shadow-md">
                                     <a href="https://app.acuityscheduling.com/schedule.php?owner=19553959"
-                                        class="flex items-center justify-center px-5 py-3 font-medium leading-6 text-white transition duration-150 ease-in-out bg-gray-900 border border-transparent rounded-md text-inter-base hover:bg-gray-800 focus:outline-none focus:shadow-outline">
+                                        class="block w-full px-6 py-3 font-medium leading-6 text-center text-white transition duration-150 ease-in-out bg-orange-500 border border-transparent rounded-lg text-inter-base hover:text-gray-200 hover:shadow-2xl focus:outline-none focus:shadow-outline">
                                         Book Now
                                     </a>
                                 </div>
@@ -896,7 +910,7 @@
 
     <!-- Ceramic Packages Area -->
 
-    <div class=" ... bg-blue-900 ">
+    <div class=" ... ">
         <div data-aos="fade-up" data-aos-duration="1200" class="px-4 pt-12 sm:px-6 lg:px-8 lg:pt-20">
             <div class="text-center">
                 <h2 class="font-semibold leading-6 tracking-wider text-gray-100 uppercase text-inter-lg">
@@ -916,7 +930,7 @@
 
         <div class="pb-12 mt-16 lg:mt-20 lg:pb-20">
             <div class="relative z-0">
-                <div class="absolute inset-0 bg-blue-900 h-5/6 lg:h-2/3"></div>
+                <div class="absolute inset-0 h-5/6 lg:h-2/3"></div>
                 <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
                     <div class="relative lg:grid lg:grid-cols-7">
                         <div
@@ -1019,7 +1033,7 @@
                                 <div class="px-6 pt-12 pb-10 rounded-t-lg">
                                     <div>
                                         <h2
-                                            class="font-semibold leading-9 text-center text-gray-200 text-inter-3xl sm:-mx-6">
+                                            class="font-semibold leading-9 text-center text-gray-200 lg:text-inter-3xl text-inter-2xl sm:-mx-6">
                                             Ceramic Tint
                                         </h2>
                                         <div class="flex items-center justify-center mt-4">
@@ -1282,7 +1296,7 @@
 
 
     <!-- Contact Us Area -->
-    <section class="bg-blue-900">
+    <section class="">
 
 
         <!-- Contact Us Form Area -->
@@ -1395,7 +1409,7 @@
     </section>
     <!-- /End of Contact Us Area -->
 
-    <footer class="bg-blue-900">
+    <footer class="">
         <!-- Get in Touch and Locations Area -->
         <div class="">
             <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
@@ -1561,7 +1575,7 @@
                 </div>
                 <div class="mt-8">
                     <p class="leading-6 text-center text-gray-100 text-inter-base">
-                        &copy; developed by masterthepixel.
+                        npm run production @masterthepixel
                     </p>
                 </div>
             </div>
