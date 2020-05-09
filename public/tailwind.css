@@ -1,5 +1,20 @@
 @tailwind base;
 
+.nav-bg {
+    background: #2A52BE;
+    background: linear-gradient(to bottom, #2A52BE 0%, #1B43AF 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2A52BE), color-stop(100%, #1B43AF));
+    background: -webkit-linear-gradient(top, #2A52BE 0%, #1B43AF 100%);
+    background: -moz-linear-gradient(top, #2A52BE 0%, #1B43AF 100%);
+    background: -o-linear-gradient(top, #2A52BE 0%, #1B43AF 100%);
+    background: -ms-linear-gradient(top, #2A52BE 0%, #1B43AF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2A52BE', endColorstr='#1B43AF', GradientType=0);
+    border: 1px solid #0C34A0;
+    box-shadow: inset 0 1px 0 #3961CD;
+    -webkit-box-shadow: inset 0 1px 0 #3961CD;
+    -moz-box-shadow: inset 0 1px 0 #3961CD;
+}
+
 
 
 .landing-bg {
